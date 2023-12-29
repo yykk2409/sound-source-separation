@@ -7,7 +7,7 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 @app.route('/')
 def index():
 #    return render_template('main.html')
-	  return Hello world!
+	  return 'Hello world!'
 '''@app.route('/sss',methods=["POST"])
 def sss():
 	url = request.form["url"]

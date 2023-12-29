@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect
+'''from flask import Flask, request, render_template, redirect
 #from flask_cors import CORS
 #from yt_dlp import YoutubeDL
 #import demucs.separate
@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 def index():
 #    return render_template('main.html')
 	  return 'Hello world!'
-'''@app.route('/sss',methods=["POST"])
+@app.route('/sss',methods=["POST"])
 def sss():
 	url = request.form["url"]
 	print(url)
@@ -17,5 +17,15 @@ def sss():
 	  ydl.download([url])
 	options = ["sound.mp3","-n","htdemucs", "--two-stems","vocals","--mp3"]
 	demucs.separate.main(options)
-	return render_template('main.html')'''
-app.run(port=8000, debug=True)
+	return render_template('main.html')
+app.run(port=8000, debug=True)'''
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(debug=True)

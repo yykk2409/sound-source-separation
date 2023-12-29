@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, redirect
 from flask_cors import CORS
-from yt_dlp import YoutubeDL
-import demucs.separate
+#from yt_dlp import YoutubeDL
+#import demucs.separate
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 @app.route('/')

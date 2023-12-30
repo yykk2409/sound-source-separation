@@ -1,9 +1,4 @@
-<audio id = "audio1" src="./b/vocals.mp3" type="audio/mpeg"></audio>
-<audio id = "audio2" src="./b/no_vocals.mp3" type="audio/mpeg"></audio>
-<form action="/sss" method="POST">
-	<input name="url" type="text" >
-	<input type="submit" value="送信">
-</form>
+<audio id = "audio1" src="./vocals.mp3" type="audio/mpeg"></audio>
 <button id="btn_play">再生</button>
 <button id="btn_pause">一時停止</button>
 <input type="range" id="current" value="0.0" min="0.0" max="100" step="1">
@@ -20,7 +15,6 @@ window.addEventListener('DOMContentLoaded', function(){
   const btn_play = document.getElementById("btn_play");
   const btn_pause = document.getElementById("btn_pause");
   const btn_repair = document.getElementById("btn_repair");
-  const btn__sendurl = document.getElementById("btn_sendurl");
   const slider_current = document.getElementById("current")
   const slider_volume1 = document.getElementById("volume1");
   const slider_volume2 = document.getElementById("volume2");
@@ -37,18 +31,18 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
   btn_play.addEventListener("click", e => {
-       audioElement1.play();
-		 audioElement2.play();
+	  audioElement1.play();
+	  audioElement2.play();
   });
 
   btn_pause.addEventListener("click", e => {
-		 audioElement2.pause();
-	    audioElement1.pause();
+	  audioElement2.pause();
+	  audioElement1.pause();
   });
   btn_repair.addEventListener("click", e => {
-		 let current = audioElement1.currentTime
-	    audioElement1.currentTime = current
-	    audioElement2.currentTime = current
+	  let current = audioElement1.currentTime
+	　audioElement1.currentTime = current
+	　audioElement2.currentTime = current
 	    
   });
   slider_volume1.addEventListener("input", e => {
@@ -58,8 +52,8 @@ window.addEventListener('DOMContentLoaded', function(){
     audioElement2.volume = slider_volume2.value;
   });
   slider_current.addEventListener("input", e => {
-    audioElement1.currentTime = slider_current.value;
-	 audioElement2.currentTime = slider_current.value;
+	  audioElement1.currentTime = slider_current.value;
+	  audioElement2.currentTime = slider_current.value;
   });
 });
 </script>
